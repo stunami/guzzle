@@ -408,8 +408,8 @@ class Client extends AbstractHasDispatcher implements ClientInterface
 
         /** @var $request RequestInterface */
         $result = array();
-        foreach ($requests as $request) {
-            $result[] = $request->getResponse();
+        foreach ($requests as $index => $request) {
+            $result[$index] = $request->getResponse();
         }
 
         return $result;
